@@ -1,0 +1,133 @@
+/* Police moderne */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7ff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.division {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    background: #f5fcff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.division:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+/* Partie texte */
+.inscri1 {
+    width: 45%;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #00d4ff, #1e90ff);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inscri1:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(30, 144, 255, 0.4);
+}
+
+.inscri1 h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.inscri1 p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Ligne verticale */
+.vertical-line {
+    width: 5px;
+    margin: 0 25px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #1e90ff, #00d4ff);
+}
+
+/* Partie formulaire */
+.inscription {
+    width: 45%;
+    padding: 50px 40px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inscription:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.inscription form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inscription label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.inscription input[type="text"],
+.inscription input[type="email"],
+.inscription input[type="date"] {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #cceeff;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.inscription input[type="text"]:focus,
+.inscription input[type="email"]:focus,
+.inscription input[type="date"]:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.4);
+}
+
+/* Bouton */
+.inscription input[type="submit"] {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00d4ff, #1e90ff);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.inscription input[type="submit"]:hover {
+    background: linear-gradient(135deg, #1e90ff, #00ffff);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(30, 144, 255, 0.5);
+}
