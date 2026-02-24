@@ -3,56 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's discover Tunisia.</title>
+    <title>Let's discover Tunisia</title>
     <link rel="stylesheet" href="page1.css">
 </head>
 <body>
-    <header>
-        <h1>Let's discover Tunisia</h1>
-        <nav> 
-            <ul>
-                <li><a href="home.html">Home </a></li>
-                <li><a href="inscription.html">Inscription </a></li>
-                <li><a href="histoire.html">History</a></li>
-            </ul>
-        </nav>
 
-    </header>
-    <main>
-        <div class="photo-section">
-            <img src="tunisia1.png" >
-        </div>
-        <form action="page.php">
-            <label for="Gouvernorat">Choisissez une Gouvernorat</label>
-            <select id="Gouvernorat" name="Gouvernorat">
-                <option value="tunis">Tunis</option>
-                <option value="Kairouan">Kairouan</option>
-                <option value="Bizerte">Bizerte</option>
-                <option value="Tataouine">Tataouine</option>
-                <option value="Djerba">Djerba</option>
-            </select>
-        </form>
+<header>
+    <h1>Let's discover Tunisia</h1>
+    <nav> 
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="histoire.html">History</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Image -->
+    <div class="photo-section">
+        <img src="tunisia1.png" alt="Tunisia">
+    </div>
+
+    <form id="gouvForm">
+        <select id="gouvernorat">
+            <option value="tunis">Tunis</option>
+            <option value="djerba">Djerba</option>
+            <option value="kairouan">Kairouan</option>
+            <option value="bizerte">Bizerte</option>
+            <option value="tataouine">Tataouine</option>
+        </select>
+        <button type="submit">Aller</button>
+    </form>
+
+    <script>
+    document.getElementById('gouvForm').addEventListener('submit', function(e){
+        e.preventDefault(); // empêche l'envoi du formulaire
+        let gouv = document.getElementById('gouvernorat').value;
+        if(gouv === 'tunis') window.location.href = 'tunis.html';
+        else if(gouv === 'djerba') window.location.href = 'djerba.html';
+        else if(gouv === 'kairouan') window.location.href = 'kairouan.html';
+        else if(gouv === 'bizerte') window.location.href = 'bizerte.html';
+        else if(gouv === 'tataouine') window.location.href = 'tataouine.html';
+    });
+    </script>
+
+    
     <table class="best-places">
         <tr>
+
             <td class="region" align="center">
-            <img src="top1.jpg" alt="Chott el Jerid"><br>
-            <a href="top1.html"><button>Chott el Jerid</button></a>
-        </td>
+                <img src="top1.jpg" alt="Chott el Jerid"><br>
+                <a href="top1.html" class="btn">Chott el Jerid</a>
+            </td>
 
-        <td class="region" align="center">
-            <img src="top2.jpg" alt="sidi bou said "><br>
-            <a href="top2.html"><button>Sousse</button></a>
-        </td>
+            <td class="region" align="center">
+                <img src="top2.jpg" alt="Sidi Bou Said"><br>
+                <a href="top2.html" class="btn">Sousse</a>
+            </td>
 
-        <td class="region" align="center">
-            <img src="top3.jpg" alt="Djerba"><br>
-            <a href="top3.html"><button>Houmt souk</button></a>
-        </td>
+            <td class="region" align="center">
+                <img src="top3.jpg" alt="Houmt Souk"><br>
+                <a href="top3.html" class="btn">Houmt Souk</a>
+            </td>
 
-        
-    </tr>
-</table>
-    </main>
-    
+        </tr>
+    </table>
+
+</main>
+
 </body>
 </html>

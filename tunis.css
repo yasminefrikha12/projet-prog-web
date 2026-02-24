@@ -1,0 +1,92 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #f0f8ff; /* bleu clair doux */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #0066cc; /* bleu foncé */
+    color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN */
+main {
+    padding: 30px;
+    text-align: center;
+}
+
+/* PHOTOS */
+.photos img {
+    width: 70%;           /* un peu plus grande */
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;  /* espace entre image et boutons */
+}
+
+.photos img:hover {
+    transform: scale(1.05); /* léger zoom */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* BOUTONS */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* espace entre boutons */
+    flex-wrap: wrap; /* permet aux boutons de passer à la ligne si écran petit */
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+    transform: translateY(-3px);
+}
